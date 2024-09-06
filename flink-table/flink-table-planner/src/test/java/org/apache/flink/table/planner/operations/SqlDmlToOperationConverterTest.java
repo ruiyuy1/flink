@@ -106,7 +106,7 @@ public class SqlDmlToOperationConverterTest extends SqlNodeToOperationConversion
         Map<String, String> dynamicOptions = sinkModifyOperation.getDynamicOptions();
         assertThat(dynamicOptions).isNotNull();
         assertThat(dynamicOptions.size()).isEqualTo(2);
-        assertThat(dynamicOptions.toString()).isEqualTo("{k1=v1, k2=v2}");
+        assertThat(dynamicOptions.toString()).isIn("{k1=v1, k2=v2}", "{k2=v2, k1=v1}");
     }
 
     @Test
